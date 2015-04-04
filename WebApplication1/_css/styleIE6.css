@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.one-element {
+  margin-left:50px;
+ }
+ 
+ #site-left-column {
+
+
+
+}
+
+.icon-column-header {
+
+  top:-25px;
+
+}
+
+#site-columns-title span.bar {
+
+  margin-top:-43px;
+
+}
+.divider {
+
+  display:inline;
+
+}
+
+#form-claim-information {
+  display:inline;
+}
+
+#form-order-information {
+  display:inline;
+}
+
+.site-section-title {
+  display:inline;
+}
+
+#site-columns-title {
+margin-bottom:-45px;
+}
+
+.fields {
+  padding-right:0;
+}
+
+#site-right-column {
+  padding-left:0;
+}
+
+#site-right-column ul {
+  width:180px;
+}
+
+.right-info{
+	padding-left:29px;
+}
+
+.icon-right-column-lookup {
+
+  height:37px;
+  margin-top:0;
+
+}
+
+
+
+#site-nav ul {
+
+  margin:0 0 0 90px;
+
+}
+
+.msg-lookup{margin:0;}
+
+#site-nav ul li {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#fade{width:100%; height:100%;}
+/* IE6 css fixer v0.8: Thu, 19 Aug 2010 22:19:28 +0200 */
+
+/* ============================================= */
+/* safe settings                                 */
+
+/* add display:inline to floated elements */
+#site-container,
+#site-columns,
+#site-columns-title,
+#site-left-column,
+#site-right-column,
+.head,
+.head h2,
+.field h3,
+.title,
+#site-right-column ul li,
+.site-section-title,
+.fields .display-info,
+.resume-info,
+.icon-add-another-part,.icon-right-column-contact,.icon-right-column-catalog,.icon-right-column-registration,.icon-right-column-info,.icon-right-column-lookup,
+.icon-add-another-part,
+.icon-help,
+.icon-help-inactive,
+.icon-expand,
+.icon-expand-inactive,
+.icon-claim-information,
+.icon-customer-information,
+.icon-service-details,
+.icon-part-detail-section,
+#form-part-detail-section,#form-service-details,#form-customer-information,#form-claim-information,#form-order-information,#form-mailing-information,#form-dealer-information,
+.form-option,
+.fields-container,
+.fields,
+.field,
+.field-text-area,
+.msg-lookup,
+#site-header span.bar,
+#action-buttons span.bar,
+.input-text,
+.input-text-area,
+select.styled,
+.select-container,
+.field .select,
+.divider,
+.divider-bar,
+#action-buttons,
+.action-button-cancel-info,
+.action-button-finish-later,
+.action-button-submit-claim,
+.action-button-get-started,
+img.btn_close,
+#laborFields,.popup-container, {display:inline;}
+
+/* convert min height values */
+#site-container {height:750px;}
+
+
+/* add transparancy */
+#fade {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30);}
+
+
+.field.one-element {
+overflow:visible;}
+.two-elements {
+  margin-right:45px;
+}
+.three-elements {
+  margin-right:28px;
+}
+.divider-bar {
+	margin:-17px 27px 30px;
+}
+
+
+.popup-container{overflow:hidden;float:left;display:block;width:20px; height:20px;}
+.action-button-get-started{margin-bottom:-15px;}
+
+#addPart h2{font-size:15px;}
+
+.panel-button-control{width:300px;}

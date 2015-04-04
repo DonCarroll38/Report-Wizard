@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <link href="../_css/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function TestRowShowAndHide(RowNo, RowCnt) {
+            console.log("$('#ShowMessage_" + RowNo + "').html() = " + $('#ShowMessage_' + RowNo).html());
+
+            var bolExpand = true;
+            if ($('#ShowMessage_' + RowNo).html() == 'Collapse') {
+                bolExpand = false;
+            } else {
+                bolExpand = true;
+            }
+
+            for (var i = 1; i <= RowCnt; i++) {
+                if (bolExpand == false) {
+                    //$('#hideMe_' + RowNo + '_' + i).collapse(700);
+                    $('#hideMe_' + RowNo + '_' + i).toggle(800, function () { $("#NothingMessage").html("Nothing Message"); });
+                } else {
+                    //$('#hideMe_' + RowNo + '_' + i).collapse(700);
+                    $('#hideMe_' + RowNo + '_' + i).toggle(800, function () { $("#NothingMessage").html("Nothing Message"); });
+                }
+            }
+
+            if ($('#ShowMessage_' + RowNo).html() == 'Collapse') {
+                $('#ShowMessage_' + RowNo).html('Expand');
+                $('#Glyph_' + RowNo).removeClass("glyphicon glyphicon-chevron-up").addClass("glyphicon glyphicon-chevron-down");
+            } else {
+                $('#ShowMessage_' + RowNo).html('Collapse');
+                $('#Glyph_' + RowNo).removeClass("glyphicon glyphicon-chevron-down").addClass("glyphicon glyphicon-chevron-up");
+            }
+        }
+    </script>
+    <style type="text/css" >
+        table, td, tr
+        {
+            width: 80%;
+        }
+        td
+        {
+            width:15%;   
+        }
+        tr.hideRows
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <br /><br /><div id="NothingMessage" style="display:none;"></div>
+    &nbsp;&nbsp;&nbsp;
+    <div class="fields-container">
+        <table class="table table-hover" border="0" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th style="font-weight: bolder;">
+                        Column Header 1
+                    </th>
+                    <th style="font-weight: bolder;">
+                        Column Header 2
+                    </th>
+                    <th style="font-weight: bolder;">
+                        Column Header 3
+                    </th>
+                    <th style="font-weight: bolder;">
+                        Column Header 4
+                    </th>
+                    <th style="width: 40%; font-weight: bolder;">
+                        Column Header 5
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <td>
+                    Column1
+                </td>
+                <td>
+                    Column2
+                </td>
+                <td>
+                    Column3
+                </td>
+                <td>
+                    Column4
+                </td>
+                <td style="width: 40%;">
+                    <table id="table1Row">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button class="btn btn-default btn-sm" onclick="javascript:TestRowShowAndHide(1,3);return false;" type="button" name="btnExpand" id="Button1" value=""><span id="Glyph_1" style="position:relative;top:0px;" class="glyphicon glyphicon-chevron-down">&nbsp;<span id="ShowMessage_1" style="position:relative;top:-2px;">Expand</span></span></button>
+                                </th>
+                                <th>
+                                    Col2
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                View Report - 1
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_1_1" class="hideRows">
+                            <td>
+                                View Report - 2
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_1_2" class="hideRows">
+                            <td>
+                                View Report - 3
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_1_3" class="hideRows">
+                            <td>
+                                View Report - 4
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Column1
+                </td>
+                <td>
+                    Column2
+                </td>
+                <td>
+                    Column3
+                </td>
+                <td>
+                    Column4
+                </td>
+                <td style="width: 40%;">
+                    <table id="table1">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button class="btn btn-default btn-sm" onclick="javascript:TestRowShowAndHide(2,5);return false;" type="button" name="btnExpand" id="Button2" value=""><span id="Glyph_2" style="position:relative;top:0px;" class="glyphicon glyphicon-chevron-down">&nbsp;<span id="ShowMessage_2" style="position:relative;top:-2px;">Expand</span></span></button>
+                                </th>
+                                <th>
+                                    Col2
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                View Report - 1
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_2_1" class="hideRows">
+                            <td>
+                                View Report - 2
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_2_2" class="hideRows">
+                            <td>
+                                View Report - 3
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_2_3" class="hideRows">
+                            <td>
+                                View Report - 4
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_2_4" class="hideRows">
+                            <td>
+                                View Report - 5
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_2_5" class="hideRows">
+                            <td>
+                                View Report - 6
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Column1
+                </td>
+                <td>
+                    Column2
+                </td>
+                <td>
+                    Column3
+                </td>
+                <td>
+                    Column4
+                </td>
+                <td style="width: 40%;">
+                    <table id="table2">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button class="btn btn-default btn-sm" onclick="javascript:TestRowShowAndHide(3,1);return false;" type="button" name="btnExpand" id="Button3" value=""><span id="Glyph_3" style="position:relative;top:0px;" class="glyphicon glyphicon-chevron-down">&nbsp;<span id="ShowMessage_3" style="position:relative;top:-2px;">Expand</span></span></button>
+                                </th>
+                                <th>
+                                    Col2
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                View Report - 1
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_3_1" class="hideRows">
+                            <td>
+                                View Report - 2
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Column1
+                </td>
+                <td>
+                    Column2
+                </td>
+                <td>
+                    Column3
+                </td>
+                <td>
+                    Column4
+                </td>
+                <td style="width: 40%;">
+                    <table id="table3">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <button class="btn btn-default btn-sm" onclick="javascript:TestRowShowAndHide(4,7);return false;" type="button" name="btnExpand" id="Button4" value=""><span id="Glyph_4" style="position:relative;top:0px;" class="glyphicon glyphicon-chevron-down">&nbsp;<span id="ShowMessage_4" style="position:relative;top:-2px;">Expand</span></span></button>
+                                </th>
+                                <th>
+                                    Col2
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                View Report - 1
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_4_1" class="hideRows">
+                            <td>
+                                View Report - 2
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_4_2" class="hideRows">
+                            <td>
+                                View Report - 3
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_4_3" class="hideRows">
+                            <td>
+                                View Report - 4
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_4_4" class="hideRows">
+                            <td>
+                                View Report - 5
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_4_5" class="hideRows">
+                            <td>
+                                View Report - 6
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr id="hideMe_4_6" class="hideRows">
+                            <td>
+                                View Report - 7
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                        <tr style="height:5px;" id="hideMe_4_7" class="hideRows">
+                            <td>
+                                View Report - 8
+                            </td>
+                            <td>
+                                3/24/2015
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        Word <span style="position:relative;top:-10px;font-size:small;font-weight:bolder;">sm</span> more words
+
+    </div>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
